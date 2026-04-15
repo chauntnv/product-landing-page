@@ -9,9 +9,7 @@
   <body>
     <nav class="navbar" id="mainNav">
       <a class="navbar-brand" href="index.html">PlayStation 5</a>
-      <button class="hamburger" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#feature">Feature</a></li>
@@ -23,21 +21,14 @@
       <div class="hero-inner">
         <div class="hero-content">
           <h1>Next-gen gaming for your everyday play</h1>
-          <p>
-            Experience lightning-fast performance, immersive visuals, and
-            revolutionary gameplay with the PlayStation 5.
-          </p>
+          <p>Experience lightning-fast performance, immersive visuals, and revolutionary gameplay with the PlayStation 5.</p>
           <a href="#" class="btn-buy">Buy now</a>
         </div>
-        <div class="hero-image">
-          <img src="assets/hero_product.png" alt="Ps5 image" />
-        </div>
+        <div class="hero-image"><img src="assets/hero_product.png" alt="Ps5 image" /></div>
       </div>
       <div class="hero-shape-bottom">
         <img src="assets/hero_bg.png" alt="" aria-hidden="true" />
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,40 C180,80 360,0 540,40 C720,80 900,0 1080,40 C1260,80 1440,20 1440,40 L1440,80 L0,80 Z" fill="#ffffff" />
-        </svg>
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C180,80 360,0 540,40 C720,80 900,0 1080,40 C1260,80 1440,20 1440,40 L1440,80 L0,80 Z" fill="#ffffff" /></svg>
       </div>
     </header>
 
@@ -46,7 +37,6 @@
         <p class="small-title">Experience next-gen gaming</p>
         <h2>PlayStation 5 delivers powerful performance and immersive features</h2>
       </div>
-
       <div class="features-grid">
         <div class="feature-item"><div class="feature-icon icon-1"></div><div><h3>Ultra-fast SSD</h3><p>Lightning-fast load times and seamless gameplay.</p></div></div>
         <div class="feature-item"><div class="feature-icon icon-2"></div><div><h3>Ray Tracing</h3><p>Enjoy realistic lighting, reflections, and shadows.</p></div></div>
@@ -54,6 +44,25 @@
         <div class="feature-item"><div class="feature-icon icon-4"></div><div><h3>120Hz Output</h3><p>Experience ultra-smooth gameplay up to 120 FPS.</p></div></div>
         <div class="feature-item"><div class="feature-icon icon-5"></div><div><h3>3D Audio</h3><p>Immersive sound with Tempest 3D AudioTech.</p></div></div>
         <div class="feature-item"><div class="feature-icon icon-6"></div><div><h3>DualSense</h3><p>Haptic feedback and adaptive triggers for better control.</p></div></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-area">
+      <div class="container">
+        <div class="section-title"><h2>Contact Us</h2></div>
+        <div class="bottom-row">
+          <div class="contact-image"><img src="assets/contact_img.png" alt="Contact illustration" /></div>
+          <div class="contact-form-wrap">
+            <p class="form-message" id="form-message"></p>
+            <form id="contact-form">
+              <div class="form-group"><input id="form_name" type="text" name="name" placeholder="Your Name" required /></div>
+              <div class="form-group"><input id="form_email" type="email" name="email" placeholder="Your Email" required /></div>
+              <div class="form-group"><input id="form_subject" type="text" name="subject" placeholder="Your Subject" required /></div>
+              <div class="form-group"><textarea id="form_message" name="message" placeholder="Your Message" rows="4" required></textarea></div>
+              <div class="form-group"><button type="submit" class="button">Send Message</button></div>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   </body>
