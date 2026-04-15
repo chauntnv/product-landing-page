@@ -4,12 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Landing Page</title>
+
     <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
   </head>
   <body>
     <nav class="navbar" id="mainNav">
       <a class="navbar-brand" href="index.html">PlayStation 5</a>
-      <button class="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
       <ul class="nav-links" id="navLinks">
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#feature">Feature</a></li>
@@ -17,55 +23,357 @@
       </ul>
     </nav>
 
+    <!-- HEADER SECTION -->
     <header class="hero" id="home">
       <div class="hero-inner">
+        <!-- left side-->
         <div class="hero-content">
           <h1>Next-gen gaming for your everyday play</h1>
-          <p>Experience lightning-fast performance, immersive visuals, and revolutionary gameplay with the PlayStation 5.</p>
-          <a href="#" class="btn-buy">Buy now</a>
+          <p>
+            Experience lightning-fast performance, immersive visuals, and
+            revolutionary gameplay with the PlayStation 5. Built to redefine how
+            you play, explore, and compete.
+          </p>
+          <a href="#" class="btn-buy">
+            <!-- cart svg -->
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0
+                     0 0 2-1.61L23 6H6"
+              />
+            </svg>
+            Buy now
+          </a>
         </div>
-        <div class="hero-image"><img src="assets/hero_product.png" alt="Ps5 image" /></div>
+
+        <!-- right side -->
+        <div class="hero-image">
+          <img src="assets/hero_product.png" alt="Ps5 image" />
+        </div>
       </div>
+
+      <!-- Bottom wave shape -->
       <div class="hero-shape-bottom">
         <img src="assets/hero_bg.png" alt="" aria-hidden="true" />
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C180,80 360,0 540,40 C720,80 900,0 1080,40 C1260,80 1440,20 1440,40 L1440,80 L0,80 Z" fill="#ffffff" /></svg>
+        <svg
+          viewBox="0 0 1440 80"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,40 C180,80 360,0 540,40 C720,80 900,0 1080,40 C1260,80 1440,20 1440,40 L1440,80 L0,80 Z"
+            fill="#ffffff"
+          />
+        </svg>
       </div>
     </header>
 
+    <!-- Feature section -->
     <section id="feature" class="features-area">
       <div class="section-title">
         <p class="small-title">Experience next-gen gaming</p>
-        <h2>PlayStation 5 delivers powerful performance and immersive features</h2>
+        <h2>
+          PlayStation 5 delivers powerful performance and immersive features
+        </h2>
       </div>
-      <div class="features-grid">
-        <div class="feature-item"><div class="feature-icon icon-1"></div><div><h3>Ultra-fast SSD</h3><p>Lightning-fast load times and seamless gameplay.</p></div></div>
-        <div class="feature-item"><div class="feature-icon icon-2"></div><div><h3>Ray Tracing</h3><p>Enjoy realistic lighting, reflections, and shadows.</p></div></div>
-        <div class="feature-item"><div class="feature-icon icon-3"></div><div><h3>4K Gaming</h3><p>Play your favorite titles in stunning 4K resolution.</p></div></div>
-        <div class="feature-item"><div class="feature-icon icon-4"></div><div><h3>120Hz Output</h3><p>Experience ultra-smooth gameplay up to 120 FPS.</p></div></div>
-        <div class="feature-item"><div class="feature-icon icon-5"></div><div><h3>3D Audio</h3><p>Immersive sound with Tempest 3D AudioTech.</p></div></div>
-        <div class="feature-item"><div class="feature-icon icon-6"></div><div><h3>DualSense</h3><p>Haptic feedback and adaptive triggers for better control.</p></div></div>
+
+      <div class="features-grid" id="featuresGrid">
+        <div class="feature-item">
+          <div class="feature-icon icon-1">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="3" />
+              <path
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"
+              />
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h3>Ultra-fast SSD</h3>
+            <p>
+              Lightning-fast load times and seamless gameplay with the PS5’s
+              custom high-speed SSD.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon icon-2">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+              <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h3>Ray Tracing</h3>
+            <p>
+              Enjoy realistic lighting, reflections, and shadows for a more
+              immersive gaming experience.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon icon-3">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="3" width="7" height="7" />
+              <rect x="14" y="3" width="7" height="7" />
+              <rect x="14" y="14" width="7" height="7" />
+              <rect x="3" y="14" width="7" height="7" />
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h3>4K Gaming</h3>
+            <p>
+              Play your favorite titles in stunning 4K resolution with smooth
+              and vibrant visuals.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon icon-4">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="8" y1="6" x2="21" y2="6" />
+              <line x1="8" y1="12" x2="21" y2="12" />
+              <line x1="8" y1="18" x2="21" y2="18" />
+              <line x1="3" y1="6" x2="3.01" y2="6" />
+              <line x1="3" y1="12" x2="3.01" y2="12" />
+              <line x1="3" y1="18" x2="3.01" y2="18" />
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h3>120Hz Output</h3>
+            <p>
+              Experience ultra-smooth gameplay with support for up to 120 frames
+              per second on compatible displays.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon icon-5">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="13.5" cy="6.5" r="0.5" fill="currentColor" />
+              <circle cx="17.5" cy="10.5" r="0.5" fill="currentColor" />
+              <circle cx="8.5" cy="7.5" r="0.5" fill="currentColor" />
+              <circle cx="6.5" cy="12.5" r="0.5" fill="currentColor" />
+              <path
+                d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"
+              />
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h3>3D Audio Technology</h3>
+            <p>
+              Immerse yourself in sound with Tempest 3D AudioTech that surrounds
+              you from every direction.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon icon-6">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h3>DualSense Controller</h3>
+            <p>
+              Feel every action with haptic feedback and adaptive triggers for a
+              truly next-gen gaming experience.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="contact-area">
       <div class="container">
-        <div class="section-title"><h2>Contact Us</h2></div>
+        <!-- Section title -->
+        <div class="section-title">
+          <h6 class="small-title">Get In Touch</h6>
+          <h2>Contact Us</h2>
+        </div>
+
+        <div class="info-row">
+          <div class="contact-info">
+            <div class="contact-info-icon">
+              <!-- Location pin icon -->
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                />
+                <circle cx="12" cy="9" r="2.5" />
+              </svg>
+            </div>
+            <div class="contact-info-content">
+              <h4>Our Address</h4>
+              <ul class="contact-info-list">
+                <li>United Airlines, Philippines</li>
+                <li>Opening Hours: 9am–10pm</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-info-icon">
+              <!-- contact icon (headphones talaga yan) -->
+              <svg viewBox="0 0 24 24">
+                <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                <path
+                  d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"
+                />
+                <path
+                  d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"
+                />
+              </svg>
+            </div>
+            <div class="contact-info-content">
+              <h4>Contact Info</h4>
+              <ul class="contact-info-list">
+                <li>WhatsApp: 105 546 777-231</li>
+                <li>Phone: 105 546 777-231</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-info-icon">
+              <!-- Email icon -->
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <polyline points="2,4 12,13 22,4" />
+              </svg>
+            </div>
+            <div class="contact-info-content">
+              <h4>Our Support</h4>
+              <ul class="contact-info-list">
+                <li>Support: support@example.com</li>
+                <li>Sales: sales@example.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         <div class="bottom-row">
-          <div class="contact-image"><img src="assets/contact_img.png" alt="Contact illustration" /></div>
+          <div class="contact-image">
+            <img src="assets/contact_img.png" alt="Contact illustration" />
+          </div>
+
           <div class="contact-form-wrap">
+            <div class="contact-form-title">
+              <h2>Let's Talk</h2>
+              <p>
+                Let&apos;s talk! Whether you have questions, need help choosing
+                the right product, or just want to learn more about what we
+                offer, we&apos;re here for you. Reach out anytime and our team
+                will get back to you as soon as possible—we&apos;d love to hear
+                from you.
+              </p>
+            </div>
+
             <p class="form-message" id="form-message"></p>
+
             <form id="contact-form">
-              <div class="form-group"><input id="form_name" type="text" name="name" placeholder="Your Name" required /></div>
-              <div class="form-group"><input id="form_email" type="email" name="email" placeholder="Your Email" required /></div>
-              <div class="form-group"><input id="form_subject" type="text" name="subject" placeholder="Your Subject" required /></div>
-              <div class="form-group"><textarea id="form_message" name="message" placeholder="Your Message" rows="4" required></textarea></div>
-              <div class="form-group"><button type="submit" class="button">Send Message</button></div>
+              <div class="form-group">
+                <input
+                  id="form_name"
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  id="form_email"
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  id="form_subject"
+                  type="text"
+                  name="subject"
+                  placeholder="Your Subject"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="form_message"
+                  name="message"
+                  placeholder="Your Message"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="button">Send Message</button>
+              </div>
             </form>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Footer -->
     <footer class="site-footer">
       <div class="footer-inner">
         <div class="footer-top">
@@ -76,12 +384,59 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
+
         <div class="footer-bottom">
-          <p class="footer-copy">&copy; 2025 PlayStation 5. All rights reserved.</p>
+          <p class="footer-copy">
+            &copy; 2025 PlayStation 5. All rights reserved.
+          </p>
           <div class="social-links">
-            <a href="#" class="social-link" aria-label="Facebook">F</a>
-            <a href="#" class="social-link" aria-label="Twitter / X">X</a>
-            <a href="#" class="social-link" aria-label="Instagram">I</a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"
+                />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"
+                />
+                <polygon
+                  points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"
+                  fill="#1a1a2e"
+                />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
